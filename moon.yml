@@ -1,0 +1,32 @@
+type: application
+language: typescript
+platform: bun
+
+tasks:
+  dev:
+    deps:
+      - db/generate
+      - db/push
+    command: bun --bun run dev | bunx pino-pretty
+
+  build:
+    command: bun --bun run build
+
+  start:
+    command: bun --bun run start
+
+  db/generate:
+    command: bunx drizzle-kit generate:sqlite
+
+  db/push:
+    options:
+      interactive: true
+    command: bunx drizzle-kit push:sqlite
+
+  db/studio:
+    command: bunx drizzle-kit studio
+
+  db:
+    deps:
+      - db/generate
+      - db/push

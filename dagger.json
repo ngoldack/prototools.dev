@@ -1,0 +1,6 @@
+{
+  "name": "prototools.dev",
+  "sdk": "typescript",
+  "source": "dagger",
+  "engineVersion": "v0.10.3"
+}

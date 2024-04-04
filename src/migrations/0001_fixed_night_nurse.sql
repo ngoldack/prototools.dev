@@ -1,0 +1,1 @@
+ALTER TABLE tools ADD `usage_id` text;

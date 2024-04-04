@@ -11,16 +11,16 @@ export type Route = {
 };
 
 export const navigation: Route[] = [
-	// @ts-ignore
+	// @ts-expect-error - Home icon is not a valid Svelte component
 	{ name: 'Home', href: '/', icon: Home },
-	// @ts-ignore
+	// @ts-expect-error - Home icon is not a valid Svelte component
 	{ name: 'Search', href: '/search', icon: Search },
 
 	// Authenticated routes
-	// @ts-ignore
+	// @ts-expect-error - Home icon is not a valid Svelte component
 	{ name: 'My Tools', href: '/profile/tools', authenticated: true, icon: Home },
-	// @ts-ignore
+	// @ts-expect-error - Home icon is not a valid Svelte component
 	{ name: 'Profile', href: '/profile', authenticated: true, icon: User, hidden: true },
-	// @ts-ignore
+	// @ts-expect-error - Home icon is not a valid Svelte component
 	{ name: 'Settings', href: '/settings', authenticated: true, icon: Cog, hidden: true }
 ];

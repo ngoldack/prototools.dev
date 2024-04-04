@@ -1,9 +1,8 @@
-import { toolTable, type InsertTool, insertToolSchema } from '$lib/schemas/tool.schema';
+import { toolTable, type InsertTool } from '$lib/schemas/tool.schema';
 import { toolBinTable, type InsertToolBin } from '$lib/schemas/tool_bin.schema';
 import { faker } from '@faker-js/faker';
 import { createClient } from '@libsql/client/web';
 import { drizzle } from 'drizzle-orm/libsql';
-import { z } from 'zod';
 
 const client = createClient({
 	url: process.env.DATABASE_URL!,

@@ -5,7 +5,7 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { cn } from '$lib/utils.js';
 	import { goto } from '$app/navigation';
-	import { Globe, Sun, Moon, Laptop, LogOut, LogIn, Search } from 'lucide-svelte';
+	import { Globe, Sun, Moon, Laptop, LogOut, LogIn } from 'lucide-svelte';
 	import { navigation } from '$lib/navigation';
 	import type { User } from 'lucia';
 

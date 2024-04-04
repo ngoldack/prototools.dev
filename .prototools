@@ -1,5 +1,2 @@
-bun = "~1.0"
+bun = "~1.1"
 node = "~20.12"
-
-[plugins]
-sops = "source:https://raw.githubusercontent.com/stk0vrfl0w/proto-toml-plugins/main/plugins/sops.toml"

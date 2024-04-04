@@ -56,7 +56,7 @@
 				</div>
 				<div class="overflow-scroll border p-2">
 					<Highlight
-						class="text-muted-foreground  text-xs"
+						class="text-xs  text-muted-foreground"
 						language={shell}
 						code={installCode(tool)}
 					/>
@@ -69,7 +69,7 @@
 
 					<div class="flex items-end gap-1 text-xs">
 						{#each tool.bins as bin, i}
-							<code class="text-muted-foreground rounded-xl border p-1">{bin.bin}</code>
+							<code class="rounded-xl border p-1 text-muted-foreground">{bin.bin}</code>
 							{#if i !== tool.bins.length - 1}
 								<span>,{' '}</span>
 							{/if}

@@ -4,13 +4,10 @@ import { dev } from '$app/environment';
 import { db } from './db';
 import { sessionTable, userTable } from '../schemas/auth.schema';
 import { DrizzleSQLiteAdapter } from '@lucia-auth/adapter-drizzle';
-import { GitHub } from "arctic";
+import { GitHub } from 'arctic';
 import { env } from '$env/dynamic/private';
 
-export const github = new GitHub(
-	env.GITHUB_CLIENT_ID,
-	env.GITHUB_CLIENT_SECRET
-);
+export const github = new GitHub(env.GITHUB_CLIENT_ID, env.GITHUB_CLIENT_SECRET);
 
 const adapter = new DrizzleSQLiteAdapter(db, sessionTable, userTable);
 export const lucia = new Lucia(adapter, {
@@ -18,8 +15,8 @@ export const lucia = new Lucia(adapter, {
 		attributes: {
 			// set to `true` when using HTTPS
 			secure: !dev
-		},
-	},
+		}
+	}
 });
 
 declare module 'lucia' {

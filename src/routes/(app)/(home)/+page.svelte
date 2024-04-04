@@ -17,5 +17,5 @@
 <Search />
 
 <div class="flex justify-center">
-	<Newest newest={data.newest}   />
+	<Newest newest={data.newest} />
 </div>

@@ -21,7 +21,7 @@
 <ModeWatcher />
 
 <div class="flex min-h-screen w-full flex-col">
-	<header class="bg-background sticky top-0 flex h-16 items-center gap-4 border-b px-4 md:px-6">
+	<header class="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
 		<nav
 			class="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6"
 		>
@@ -31,7 +31,7 @@
 			</a>
 			{#each navigation as nav}
 				{#if !nav.hidden && (!nav.authenticated || data.user)}
-					<a href={nav.href} class="text-muted-foreground hover:text-foreground transition-colors">
+					<a href={nav.href} class="text-muted-foreground transition-colors hover:text-foreground">
 						{nav.name}
 					</a>
 				{/if}
@@ -75,7 +75,7 @@
 					</DropdownMenu.Trigger>
 					<DropdownMenu.Content align="end">
 						<DropdownMenu.Label>My Account</DropdownMenu.Label>
-						<span class="text-muted-foreground text-sm">@{data.user.id}</span>
+						<span class="text-sm text-muted-foreground">@{data.user.id}</span>
 						<DropdownMenu.Separator />
 						<DropdownMenu.Item>Settings</DropdownMenu.Item>
 						<DropdownMenu.Separator />
@@ -96,21 +96,21 @@
 	</main>
 	<footer>
 		<div
-			class="bg-background border-muted-foreground text-muted-foreground border-t p-4 text-center"
+			class="border-t border-muted-foreground bg-background p-4 text-center text-muted-foreground"
 		>
 			<p>
 				© {new Date().getFullYear()} <a href="https://ngoldack.de">@ngoldack</a>
 				| Built with
 				<a
 					href="https://kit.svelte.dev"
-					class="text-muted-foreground hover:text-foreground transition-colors"
+					class="text-muted-foreground transition-colors hover:text-foreground"
 				>
 					SvelteKit
 				</a>
 				|
 				<a
 					href="https://github.com/ngoldack/prototools.dev"
-					class="text-muted-foreground hover:text-foreground transition-colors"
+					class="text-muted-foreground transition-colors hover:text-foreground"
 				>
 					<Github class="inline-block h-3 w-3" />
 					Source

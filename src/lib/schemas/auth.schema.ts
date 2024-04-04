@@ -4,7 +4,7 @@ export const userTable = sqliteTable('user', {
 	id: text('id').notNull().primaryKey(),
 
 	githubId: integer('github_id').notNull(),
-	username: text('username'),
+	username: text('username')
 });
 
 export const sessionTable = sqliteTable('session', {
